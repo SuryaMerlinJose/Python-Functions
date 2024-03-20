@@ -59,10 +59,11 @@ def move_and_unzip():
                 # dest=os.path.join(Processed_path, fi)
                 # shutil.move(folder,dest)
                 os.rmdir(os.path.join(DXC_SP, fi))
+
+
                 """
                 ERROR!
-                os.remove(os.path.join(DXC_SP, fi)) 
-                PermissionError: [WinError 5] Access is denied: 'C:\\Task_Zip\\DXC_SP\\2024-02-28'
+                os.remove(os.path.join(DXC_SP, fi)) ---> PermissionError: [WinError 5] Access is denied: 'C:\\Task_Zip\\DXC_SP\\2024-02-28'
                 Reason: os.remove can only be used to delete files like .zip,.xlsx,.txt etc...
 
                 for deleting directories we need to use os.rmdir
@@ -85,10 +86,5 @@ zipfile.ZipFile: This is a class from Python's zipfile module used to work with 
 
 """
 
-"""
-ERROR!
 
-os.remove(os.path.join(DXC_SP, fi))
-PermissionError: [WinError 5] Access is denied: 'C:\\Task_Zip\\DXC_SP\\2024-02-28'
-"""
     
